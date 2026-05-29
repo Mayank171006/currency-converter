@@ -24,9 +24,9 @@ A responsive Currency Converter web application built using HTML, CSS, and JavaS
 ```text
 currency-converter/
 ├── README.md
+├── Screenshot.png
 ├── countryCodes.js
 ├── index.html
-├── Screenshot.png
 ├── script.js
 └── style.css
 ```
