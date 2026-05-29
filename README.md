@@ -30,8 +30,15 @@ currency-converter/
 ├── script.js
 └── style.css
 ```
+## Live Demo
 
-## How to Run
+https://mayank171006.github.io/currency-converter/
+
+## How to Run Locally
+
+```bash
+git clone https://github.com/Mayank171006/currency-converter.git
+## How to Run Locally
 
 1. Clone the repository:
 
