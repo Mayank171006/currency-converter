@@ -27,11 +27,19 @@ body{
         align-items: center;
         min-width:45vh;
 }
+form{
+        display:flex;
+        flex-direction: column;
+        
+}
+/* Change box width depending upon width of device window */
 @media (min-width:450px){
         .mainBox{
                 min-width:60vh;
         }
 }
+
+/* Amount input box */
 .enter{
         width:40vh;
        
@@ -51,6 +59,8 @@ body{
         margin-bottom:10px;
         border-radius: 0.5rem;
 }
+
+/* Country Selector box */
 .countrySelector{
         display:flex;
         justify-content: space-around;
@@ -78,20 +88,18 @@ select{
         width:7vh;
         
 }
+
+/* Calculated answer message box */
 .AnswerBox{
         font-size:25px;
         text-align:center;
         background-color:#FFEC51;
-        margin-top:10px;
-       
+        margin-top:10px;     
         border:0.1rem solid #06046c;
         padding: 4px 20px 4px 20px;
 }
-form{
-        display:flex;
-        flex-direction: column;
-        
-}
+
+/* Convert button */
 button{
         border:0.1rem solid #06046c;
         padding: 4px 20px 4px 20px;
