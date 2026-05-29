@@ -1,3 +1,4 @@
+// All currency codes with their flag codes
 const countryList = {
         AED: "AE",
         AFN: "AF",
