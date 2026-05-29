@@ -1,11 +1,11 @@
-const exchangeRatesURL="https://api.frankfurter.dev/v2/rates";
+const exchangeRatesURL="https://api.frankfurter.dev/v2/rates";  //BASE URL FOR EXCHANGE RATES
 const selector=document.querySelectorAll("select");
 const btn=document.querySelector("button");
 const fromCurr=document.querySelector("#fromBox select");
 const toCurr=document.querySelector("#toBox select");
 const ansbox=document.querySelector(".AnswerBox");
 const ic=document.querySelector("i");
-function updateFlag(element){
+function updateFlag(element){                                 //Update flag on option change
         let image=element.parentElement.querySelector("img");
         let currCode=element.value;
         let flagCode=countryList[currCode];
@@ -33,7 +33,7 @@ for (let selectobox of selector){
                 })
         }
 }
-const updateExchangeRate=async ()=>{
+const updateExchangeRate=async ()=>{                                  //Update answer box when convert button is clicked
         let amount=document.querySelector("input");
         let amt=amount.value;
         if (isNaN(amt) || amt<0){
@@ -48,7 +48,7 @@ const updateExchangeRate=async ()=>{
         let newAnswer=`${amt} ${fromCurr.value} = ${Math.round(amt*rate*1000)/1000} ${toCurr.value}`;
         ansbox.innerText=newAnswer;
 }
-const exchangeCurr=()=>{
+const exchangeCurr=()=>{                                                  //Swap from and to countries
         let op1=document.querySelector(`#fromBox select option[value=${toCurr.value}]`);
         let op2=document.querySelector(`#toBox select option[value=${fromCurr.value}]`);
         op1.selected="selected";
@@ -60,7 +60,7 @@ btn.addEventListener("click",(evt)=>{
         evt.preventDefault();
         updateExchangeRate();
 });
-window.addEventListener("load",(evt)=>{
+window.addEventListener("load",(evt)=>{                        
         updateExchangeRate();
 })
 ic.addEventListener("click",(evt)=>{
